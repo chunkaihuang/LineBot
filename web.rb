@@ -26,7 +26,7 @@ post '/callback' do
         say_message = event.message['text']
         message = {
           type: 'text',
-          text: "reply: #{say_message}"
+          text: "回應: #{say_message}"
         }
         response = client.reply_message(event['replyToken'], message)
       when Line::Bot::Event::MessageType::Image, Line::Bot::Event::MessageType::Video
